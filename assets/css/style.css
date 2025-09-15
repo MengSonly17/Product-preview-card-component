@@ -27,7 +27,7 @@
         max-width:350px;
         background-color: var(--White);
         border-radius: 10px;
-        overflow:hidden
+        overflow:hidden;
     }
     .container .left .img-desktop {
         display: none;
