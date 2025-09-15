@@ -1,0 +1,196 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --Green500:hsl(158,36%,37%);
+    --Green700:hsl(158,42%,18%);
+    --Black:hsl(212,21%,14%);
+    --Grey:hsl(228,12%,48%);
+    --Cream:hsl(30,38%,92%);
+    --White:hsl(0,0%,100%);
+    --Fontsize:14px;
+    --FontStyle: sans-serif;
+}
+/* mobile */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: var(--Cream);
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        /* font-family: var(--FontStyle); */
+    }
+    .container {
+        max-width:350px;
+        background-color: var(--White);
+        border-radius: 10px;
+        overflow:hidden
+    }
+    .container .left .img-desktop {
+        display: none;
+    }
+    .container .left .img-mobile {
+        width:100%;
+        object-fit: cover; 
+    }
+    .container .right { 
+        padding:30px;
+    }
+    .container .right p span { 
+        margin:10px 0 20px ;
+        color: var(--Grey);
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+        letter-spacing: 2px;
+    }
+    .container .right h1 { 
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
+    .container .right p  { 
+        margin:10px 0 20px ;
+        color: var(--Grey); 
+        font-size: 14px; 
+        line-height: 19px;
+    }
+    .container .right .price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .current-price { 
+            color:var(--Green500);
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 9px;
+        }
+        .old-price {
+            color: var(--Grey);
+            text-decoration: line-through;
+            font-size: 12px;
+        }
+    }
+    .container .right button {
+        background-color: var(--Green500);
+        color:var(--Cream);
+        width:100%;
+        padding:15px 0;
+        border:none;
+        outline:none;
+        border-radius:5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition:all 0.3s ease-in;
+
+        &:hover {
+            background-color: var(--Green700);
+        }
+
+        img {
+            margin-right: 8px;
+            width:15px;
+        }
+    }
+}
+/* desktop */
+@media screen and (min-width: 480px) {
+    body {
+        background-color: var(--Cream);
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+    }
+    .container .left .img-mobile {
+        display: none;
+    }
+    .container .left .img-desktop {
+        width:100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    .container {
+        display: flex;
+        max-width:600px; 
+        border-radius: 9px;
+        overflow:hidden;
+        /* border:1px solid black; */
+        background-color: var(--White);
+    }
+    .container .left {
+        width:300px;  
+    }
+    .container .right {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width:300px; 
+        padding:30px;
+    }
+    .container .right p span { 
+        color: var(--Grey);
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 10px;
+        letter-spacing: 5px;
+    }
+    .container .right h1 { 
+        margin-bottom: 15px;
+        font-size: 35px;
+    }
+    .container .right p.description  { 
+        margin:10px 0 10px ;
+        color: var(--Grey); 
+        font-size: 14px; 
+        line-height: 19px;
+        font-style: var(--FontStyle);
+    }
+    .container .right .price {
+        display: flex;
+        align-items: center;
+        margin :15px 0 30px; 
+
+        .current-price { 
+            color:var(--Green500);
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 9px;
+        }
+        .old-price {
+            color: var(--Grey);
+            text-decoration: line-through;
+            font-size: 12px;
+        }
+    }
+    .container .right button {
+        background-color: var(--Green500);
+        color:var(--Cream);
+        width:100%;
+        padding:15px 0;
+        border:none;
+        outline:none;
+        border-radius:5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition:all 0.3s ease-in;
+
+        &:hover {
+            background-color: var(--Green700);
+        }
+
+        img {
+            margin-right: 8px;
+            width:15px;
+        }
+    }
+}
